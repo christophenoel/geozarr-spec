@@ -16,7 +16,7 @@ GeoZarr documentation by Christophe Noël (Spacebel) and other contributors.
 
 ## GeoZarr Classes
 
-### GeoZarr DataArray
+### GeoZarr Array Variables
 
 A GeoZarr DataArray is a **Zarr Array** that provides values of a measured or observed **phenomenon** (possibly indirectly computed using processing). For example, it provides the reflectance pixels of a captured satellite scene, or it describes the average vegetation index (NDVI) values for defined period of times.
 
@@ -26,13 +26,13 @@ GeoZarr DataArray MUST include the attribute **\_ARRAY_DIMENSIONS which list the
         "lat",
         "lon"
     ]
-### GeoZarr Coordinates Variable
+### GeoZarr Coordinates Variables
 
 GeoZarr Coordinates Variable is a one dimensional **Zarr Array** that **indexes a dimension** of a GeoZarr DataArray (e.g latitude, longitude, time, wavelength).
 
 GeoZarr Coordinates Variable MUST include the attribute **\_ARRAY_DIMENSIONS equal to the Zarr array name** (e.g. latitude for the latitude Zarr Array).
 
-### GeoZarr Auxiliary Variable
+### GeoZarr Auxiliary Variables
 
 GeoZarr Auxiliary Variable is multidimensional **Zarr Array** providing auxiliary information. This includes geospatial metadata such as grid_mapping which describe the projection of the coordinates.
 
@@ -40,11 +40,12 @@ GeoZarr Auxiliary Variable MUST include the attribute **\_ARRAY_DIMENSIONS set a
 
 ### GeoZarr Dataset
 
-GeoZarr Dataset is a root **Zarr Group** which contains a consistent **set of DataArrays** (observed data), coordinates, auxiliary variables, and optionally children groups.
+GeoZarr Dataset is a root **Zarr Group** which contains a consistent **set of arrays variables** (observed data), coordinates, auxiliary variables, and optionally children datasets (located in children Zarr groups). 
 
-GeoZarr Dataset MUST contain a consistent set of data for which the DataArrays have aligned dimensions and share the same coordinates grid. If multiple arrays share heterogenous dimensions or coordinates, a primary set MUST be located at root level, and the other sets put in children Zarr groups.
+GeoZarr Dataset MUST contain a consistent set of data for which the Array Variables have aligned dimensions and share the same coordinates grid. If multiple Array
+ Variables share heterogenous dimensions or coordinates, a primary set MUST be located at root level, and the other sets put in children datasets.
 
-## GEoZarr - CF Conventions
+## GeoZarr - CF Conventions
 
 ### Multiscales
 
