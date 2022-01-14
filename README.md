@@ -18,9 +18,16 @@ Content in this repository is licensed under a Creative Commons Attribution 4.0 
 
 ## Geospatial Zarr Classes
 
+### GeoZarr DataArray
+
+A GeoZarr DataArray is a Zarr array which provides values of a measured/observed phenomenon (possibly indirectly computed using processing). For example, it provides the reflectance pixels of a captured satellite scene, or it describes the average vegetation index (NDVI) values for defined period of times.
+
+
+
+
 ### GeoZarr Dataset
 
-### GeoZarr DataArray
+
 
 "_ARRAY_DIMENSIONS": [
         "y",
@@ -47,7 +54,9 @@ __GeoZarr+__
 If the arrays have aligned dimensions and share the same coordinates grid.
 If the above recommendation is not satisfied (e.g. if the arrays don't share the same coordinates grid), then no array
 
-## Observed Data Attributes
+## GeoZarr DataArray Attributes
+
+The attribute \_ARRAY_DIMENSIONS list the dimension names (for example ["lat","lon"]).
 
 ### CF Conventions
 
