@@ -1,6 +1,6 @@
 # GeoZarr-spec 0.1
 
-This document aims to provides a geospatial extension to the Zarr (v2) specification. Zarr specify a protocol and format used for storing Zarr arrays, while the extension defines conventions and recommendations for storing any multidimensional georeferenced grid of values (including rasters). 
+This document aims to provides a geospatial extension to the Zarr specification (v2). Zarr specify a protocol and format used for storing Zarr arrays, while the extension defines conventions and recommendations for storing any multidimensional georeferenced grid of values (including rasters). 
 
 GeoZarr baseline defines strict conventions that suits most use cases (and easily supported by libraries), but second GeoZarr+ model provides smoother recommendations for handling more complex scenarios. 
 
