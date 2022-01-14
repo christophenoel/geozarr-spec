@@ -22,7 +22,15 @@ Content in this repository is licensed under a Creative Commons Attribution 4.0 
 
 ### GeoZarr DataArray
 
+"_ARRAY_DIMENSIONS": [
+        "y",
+        "x"
+    ],
+
+
 ### GeoZarr Variable
+
+
 
 Zarr Dataset 
 
