@@ -62,7 +62,7 @@ A CF **standard name** is an attribute which identifies the physical quantity of
 
 The **grid_mapping** variable defined by DataArray variable defines  the coordinate reference system (CRS) used for the horizontal spatial coordinate values. The grid_mapping value indicates the Auxliary variable that holds all the CF attribute describing the cRS. 
 
-However, it is useful to fully describe data using CF conventions, in particular the attributes below are also recommended:
+However, all other CF conventions are recommended, in particular the attributes below:
 
 * add_offset
 * scale_factor
