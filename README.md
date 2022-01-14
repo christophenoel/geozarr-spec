@@ -10,9 +10,9 @@ This specification is an early draft (v0.1)
 
 ## License
 
-GeoZarr documentation (c) by Christophe Noël (Spacebel) and other contributors.
+(CC BY 4.0) : Content in this repository is licensed under a Creative Commons Attribution 4.0 International  license. Licensees may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits (attribution). You can find the complete text of this license at http://creativecommons.org/licenses/by/4.0/.
 
-Content in this repository is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license. Licensees may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits (attribution). You can find the complete text of this license at http://creativecommons.org/licenses/by/4.0/.
+GeoZarr documentation by Christophe Noël (Spacebel) and other contributors.
 
 ## GeoZarr Classes
 
