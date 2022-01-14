@@ -16,11 +16,11 @@ GeoZarr documentation by Christophe Noël (Spacebel) and other contributors.
 
 ## Conceptual Classes
 
-### GeoZarr Array Variables
+### GeoZarr DataArray Variables
 
-A GeoZarr DataArray is a **Zarr Array** that provides values of a measured or observed **phenomenon** (possibly indirectly computed using processing). For example, it provides the reflectance pixels of a captured satellite scene, or it describes the average vegetation index (NDVI) values for defined period of times.
+A GeoZarr DataArray variable is a **Zarr Array** that provides values of a measured or observed **phenomenon** (possibly indirectly computed using processing). For example, it provides the reflectance pixels of a captured satellite scene, or it describes the average vegetation index (NDVI) values for defined period of times.
 
-GeoZarr DataArray MUST include the attribute **\_ARRAY_DIMENSIONS which list the dimension names**.
+GeoZarr DataArray variable MUST include the attribute **\_ARRAY_DIMENSIONS which list the dimension names** (this property was first introduced by xarray library).
 
 "_ARRAY_DIMENSIONS": [
         "lat",
@@ -28,38 +28,49 @@ GeoZarr DataArray MUST include the attribute **\_ARRAY_DIMENSIONS which list the
     ]
 ### GeoZarr Coordinates Variables
 
-GeoZarr Coordinates Variable is a one dimensional **Zarr Array** that **indexes a dimension** of a GeoZarr DataArray (e.g latitude, longitude, time, wavelength).
+GeoZarr Coordinates variable is a one dimensional **Zarr Array** that **indexes a dimension** of a GeoZarr DataArray (e.g latitude, longitude, time, wavelength).
 
-GeoZarr Coordinates Variable MUST include the attribute **\_ARRAY_DIMENSIONS equal to the Zarr array name** (e.g. latitude for the latitude Zarr Array).
+GeoZarr Coordinates variable MUST include the attribute **\_ARRAY_DIMENSIONS equal to the Zarr array name** (e.g. latitude for the latitude Zarr Array).
 
 ### GeoZarr Auxiliary Variables
 
-GeoZarr Auxiliary Variable is multidimensional **Zarr Array** providing auxiliary information. This includes geospatial metadata such as grid_mapping which describe the projection of the coordinates.
+GeoZarr Auxiliary variable is empty, one dimensional or multidimensional **Zarr Array** providing auxiliary information.
 
-GeoZarr Auxiliary Variable MUST include the attribute **\_ARRAY_DIMENSIONS set as an empty array**.
+GeoZarr Auxiliary variable MUST include the attribute **\_ARRAY_DIMENSIONS set as an empty array**.
 
 ### GeoZarr Dataset
 
-GeoZarr Dataset is a root **Zarr Group** which contains a consistent **set of arrays variables** (observed data), **coordinates variables**, auxiliary variables, and optionally children 'secondary' datasets (located in children Zarr Groups). 
+GeoZarr Dataset is a root **Zarr Group** which contains a consistent **set of DataArray variables** (observed data), **Coordinates variables**, Auxiliary variables, and optionally children Datasets (located in children Zarr Groups). 
 
-GeoZarr Dataset MUST contain a consistent set of data for which the Array Variables have aligned dimensions and share the same coordinates grid. If multiple Array
- Variables share heterogenous dimensions or coordinates, a primary set MUST be located at root level, and the other sets put in children datasets.
+GeoZarr Dataset MUST contain a consistent set of data for which the DataArray variables have aligned dimensions, share the same coordinates grid, and an equal spatial projection.
+
+If multiple Array Variables share heterogenous dimensions or coordinates, a primary set MUST be located at root level, and the other sets put in children datasets.
 
 ## CF Conventions
 
 GeoZarr Arrays and Coordinates Variables MUST include [Climate and Forecast CF](http://cfconventions.org/) conventions. The minimum set of attributes MUST be:
 
 * standard_name for all variables
-* 
+* grid_mapping for all array variables
 
-that are listed below. However, it is recommended to follow the complete set of conventions. 
+A CF **standard name** is an attribute which identifies the physical quantity of a variable ([table](https://cfconventions.org/Data/cf-standard-names/78/build/cf-standard-name-table.html)). The quantity may describe the observed phenomenon for a DataArray (for example 'surface_bidirectional_reflectance' for optical sensor data) or identify the 
+
+* grid_latitude
+* grid_longitude
+* sensor_band_identifier (multisptrectal band identifier)
+* radiation_wavelength (hyperspectral wave length)
+
+
+However, it is useful to fully describe data using CF conventions, in particular with the recommended attributes below:
+
+* add_offset
+* scale_factor
+* units (as per [UDUNITS v2](https://www.unidata.ucar.edu/software/udunits/udunits-2.2.28/udunits2.html)
 
 
 
 
 
-A CF **standard name** is not a netCDF variable name, but instead a value for the standard_name variable attribute.
-A standard_name attribute identifies the physical quantity of a variable, for example "air_temperature", "divergence_of_wind", "plant_respiration_carbon_flux", or "tendency_of_atmosphere_mass_content_of_particulate_organic_matter_dry_aerosol_due_to_net_production_and_emission".
 
 ### Multiscales
 
