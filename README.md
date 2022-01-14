@@ -66,7 +66,7 @@ However, it is useful to fully describe data using CF conventions, in particular
 
 * add_offset
 * scale_factor
-* units (as per [UDUNITS v2](https://www.unidata.ucar.edu/software/udunits/udunits-2.2.28/udunits2.html)
+* units (as per [UDUNITS v2](https://www.unidata.ucar.edu/software/udunits/udunits-2.2.28/udunits2.html))
 
 ### Multiscales
 
