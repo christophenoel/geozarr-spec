@@ -47,7 +47,7 @@ GeoZarr Dataset MUST contain a consistent set of data for which the Array Variab
 
 ## CF Conventions
 
-GeoZarr Arrays and Coordinates Variables MUST follow the (Climate and Forecast CF)[http://cfconventions.org/] conventions that are listed below. However, it is recommended to follow the complete set of conventions. 
+GeoZarr Arrays and Coordinates Variables MUST follow the [http://cfconventions.org/](Climate and Forecast CF) conventions that are listed below. However, it is recommended to follow the complete set of conventions. 
 
 
 
