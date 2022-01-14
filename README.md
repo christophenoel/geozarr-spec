@@ -53,8 +53,15 @@ GeoZarr Dataset MUST contain a consistent set of data for which the Array Variab
 
 ###
 
-## Practical Concerns
+## Specific Recommendations
 
-### Bands
+### Multispectral Data
+
+If the optical sensor captures spectral bands for different resolution, various structure might be considered:
+* The root group holds the highest resolution dataset, and children groups the other resolutions.
+* TBD
+
+By the way, the spectral band itself might be represented in different maneer:
+* If the band is represented in a dedicaed array, As an array
 
 
