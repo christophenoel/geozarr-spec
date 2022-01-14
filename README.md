@@ -20,7 +20,7 @@ Content in this repository is licensed under a Creative Commons Attribution 4.0 
 
 A GeoZarr DataArray is a **Zarr Array** that provides values of a measured or observed **phenomenon** (possibly indirectly computed using processing). For example, it provides the reflectance pixels of a captured satellite scene, or it describes the average vegetation index (NDVI) values for defined period of times.
 
-GeoZarr DataArray MUST include the attribute \_ARRAY_DIMENSIONS which list the dimension names.
+GeoZarr DataArray MUST include the attribute **\_ARRAY_DIMENSIONS which list the dimension names**.
 
 "_ARRAY_DIMENSIONS": [
         "lat",
@@ -30,13 +30,13 @@ GeoZarr DataArray MUST include the attribute \_ARRAY_DIMENSIONS which list the d
 
 GeoZarr Coordinates Variable is a one dimensional **Zarr Array** that **indexes a dimension** of a GeoZarr DataArray (e.g latitude, longitude, time, wavelength).
 
-GeoZarr Coordinates Variable MUST include the attribute \_ARRAY_DIMENSIONS with value equal to the Zarr array name (e.g. latitude for the latitude Zarr Array).
+GeoZarr Coordinates Variable MUST include the attribute **\_ARRAY_DIMENSIONS equal to the Zarr array name** (e.g. latitude for the latitude Zarr Array).
 
 ### GeoZarr Auxiliary Variable
 
 GeoZarr Auxiliary Variable is multidimensional **Zarr Array** providing auxiliary information. This includes geospatial metadata such as grid_mapping which describe the projection of the coordinates.
 
-GeoZarr Auxiliary Variable MUST include the attribute \_ARRAY_DIMENSIONS with an empty array value.
+GeoZarr Auxiliary Variable MUST include the attribute **\_ARRAY_DIMENSIONS set as an empty array**.
 
 ### GeoZarr Dataset
 
