@@ -88,7 +88,7 @@ In case of downscaled instances of the data, the DataArray MUST define a multisc
 -    }
 -  ]
 -}
-```diff
+```
 
 **Conventions:**
 
