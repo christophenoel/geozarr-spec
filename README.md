@@ -22,9 +22,6 @@ Content in this repository is licensed under a Creative Commons Attribution 4.0 
 
 A GeoZarr DataArray is a Zarr array which provides values of a measured/observed phenomenon (possibly indirectly computed using processing). For example, it provides the reflectance pixels of a captured satellite scene, or it describes the average vegetation index (NDVI) values for defined period of times.
 
-
-
-
 ### GeoZarr Dataset
 
 
