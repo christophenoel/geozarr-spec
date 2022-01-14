@@ -47,6 +47,9 @@ GeoZarr Dataset MUST contain a consistent set of data for which the Array Variab
 
 ## GeoZarr - CF Conventions
 
+A CF standard name is not a netCDF variable name, but instead a value for the standard_name variable attribute.
+A standard_name attribute identifies the physical quantity of a variable, for example "air_temperature", "divergence_of_wind", "plant_respiration_carbon_flux", or "tendency_of_atmosphere_mass_content_of_particulate_organic_matter_dry_aerosol_due_to_net_production_and_emission".
+
 ### Multiscales
 
 ### Rechunking
@@ -62,6 +65,6 @@ If the optical sensor captures spectral bands for different resolution, various 
 * TBD
 
 By the way, the spectral band itself might be represented in different maneer:
-* If the band is represented in a dedicaed array, As an array
+* If the band is represented in a dedicated array variable, As an array
 
 
