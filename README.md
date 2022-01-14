@@ -70,6 +70,39 @@ However, all other CF conventions are recommended, in particular the attributes 
 
 ### Multiscales
 
+A GeoZarr DataArray variable might
+
+In case of downscaled instances of the data, the DataArray MUST define a multiscales attribute that complies the following schema:
+
+```diff
+-{
+-  "multiscales": [
+-    {
+!      "version": "0.1",
+!      "name": "example",
+-      "datasets": [
+-        {"path": "0"},
+-        {"path": "1"},
+-        {"path": "2"}
+-      ],
+!      "type": "gaussian",
+!      "metadata": {
++        "method":
+#          "skiimage.transform.pyramid_gaussian",
++        "version":
+#          "0.16.1",
++        "args":
+#          [true],
++        "kwargs":
+#          {"multichannel": true}
+!      }
+-    }
+-  ]
+-}
+```diff
+
+
+
 ### Rechunking
 
 ###
