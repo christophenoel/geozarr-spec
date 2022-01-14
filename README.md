@@ -40,7 +40,7 @@ GeoZarr Auxiliary Variable MUST include the attribute **\_ARRAY_DIMENSIONS set a
 
 ### GeoZarr Dataset
 
-GeoZarr Dataset is a root **Zarr Group** which contains a consistent **set of arrays variables** (observed data), coordinates, auxiliary variables, and optionally children datasets (located in children Zarr groups). 
+GeoZarr Dataset is a root **Zarr Group** which contains a consistent **set of arrays variables** (observed data), **coordinates variables**, auxiliary variables, and optionally children 'secondary' datasets (located in children Zarr Groups). 
 
 GeoZarr Dataset MUST contain a consistent set of data for which the Array Variables have aligned dimensions and share the same coordinates grid. If multiple Array
  Variables share heterogenous dimensions or coordinates, a primary set MUST be located at root level, and the other sets put in children datasets.
