@@ -47,13 +47,18 @@ GeoZarr Dataset MUST contain a consistent set of data for which the Array Variab
 
 ## CF Conventions
 
-GeoZarr Arrays and Coordinates Variables MUST follow the [Climate and Forecast CF](http://cfconventions.org/) conventions that are listed below. However, it is recommended to follow the complete set of conventions. 
+GeoZarr Arrays and Coordinates Variables MUST include [Climate and Forecast CF](http://cfconventions.org/) conventions. The minimum set of attributes MUST be:
+
+* standard_name for all variables
+* 
+
+that are listed below. However, it is recommended to follow the complete set of conventions. 
 
 
 
-GeoZarr - CF Conventions
 
-A CF standard name is not a netCDF variable name, but instead a value for the standard_name variable attribute.
+
+A CF **standard name** is not a netCDF variable name, but instead a value for the standard_name variable attribute.
 A standard_name attribute identifies the physical quantity of a variable, for example "air_temperature", "divergence_of_wind", "plant_respiration_carbon_flux", or "tendency_of_atmosphere_mass_content_of_particulate_organic_matter_dry_aerosol_due_to_net_production_and_emission".
 
 ### Multiscales
