@@ -72,9 +72,14 @@ However, all other CF conventions are recommended, in particular the attributes 
 
 A GeoZarr DataArray variable might
 
-In case of downscaled instances of the data, the DataArray MUST define a multiscales attribute that includes the following attributes (mandatory items in red, optional items in green).
+In case of downscaled instances of the data, the DataArray MUST define a multiscales attribute that includes the following properties 
+* TBD level default strategy (see existing )
+* Path MUST provides a relative path the Zarr group which holds the same DataArray variable (based on name)
+* Data size can be infered from the size of the referenced array
+
 
 ```diff
+(mandatory items in red, optional items in green)
 -{
 -  "multiscales": [
 -    {
@@ -90,11 +95,6 @@ In case of downscaled instances of the data, the DataArray MUST define a multisc
 -}
 ```
 
-**Conventions:**
-
-* TBD level default strategy (see existing )
-* Path must provides a relative path the Zarr group which holds the same DataArray variable (based on name)
-* Data size can be infered from the size of the referenced array
 
 ### Rechunking
 
