@@ -52,3 +52,9 @@ GeoZarr Dataset MUST contain a consistent set of data for which the Array Variab
 ### Rechunking
 
 ###
+
+## Practical Concerns
+
+### Bands
+
+
