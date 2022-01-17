@@ -65,8 +65,6 @@ The quantity may describe the observed phenomenon for:
 * a Coordinate variable
 * an Auxiliary variable
 
-### Dimensions
-
 The following standard names are recommended for dimensions holding the geospatial data:
 * grid_latitude, grid_longitude (spatial coordinates as degrees)
 * projection_x_coordinate, projection_y_coordinates (spatial coordinates as per projection)
@@ -157,14 +155,11 @@ The attribute rechunking list the path the the various instances of the data. Th
 -}
 
 
-
-## Specific Recommendations
+## Use Cases
 
 ### Multispectral Data
 
-If the optical sensor captures spectral bands for different resolution, various structure might be considered:
-* The root group holds the highest resolution dataset, and children groups the other resolutions.
-* TBD
+If the optical sensor captures spectral bands for different resolution, it is RECOMMENDED to hold the highest resolution dataset, and children groups the other resolutions.
 
 By the way, the spectral band itself might be represented in different maneer:
 * If the band is represented in a dedicated array variable, As an array
