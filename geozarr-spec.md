@@ -163,7 +163,14 @@ The attribute rechunking list the path the the various instances of the data. Th
 
 If the optical sensor captures spectral bands for different resolution, it is RECOMMENDED to hold the highest resolution dataset in the root group, and provide the other resolutions in children groups.
 
-The spectral band SHOULD be represented as a dimension (not as an array neither a group).
+The spectral band SHOULD be represented as a dimension (not as an array neither a group). For identifying the band it is RECOMMENDED to either:
+* Use the STAC Band common name (see https://github.com/stac-extensions/eo/blob/main/README.md#common-band-names)
+* Use the mission specific identifier
 
+### Hyperspectral Data
 
+The wavelength SHOULD be represented as a dimension.
 
+### Time Series
+
+Time should be represented as a dimension. By default, it is considered that the various temporal instance are aligned using a nearest interpolation (which implies maximum half resolution of error in worst case).
