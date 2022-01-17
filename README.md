@@ -16,11 +16,11 @@ GeoZarr documentation by Christophe Noël (Spacebel) and other contributors.
 
 ## GeoZarr Classes
 
-GeoZarr is
+GeoZarr is restricted to geospatial data which conforms to the conceptual class of Dataset as defined below.
 
 ### GeoZarr DataArray Variables
 
-A GeoZarr DataArray variable is a **Zarr Array** that provides values of a measured or observed **phenomenon** (possibly indirectly computed using processing). For example, it provides the reflectance pixels of a captured satellite scene, or it describes the average vegetation index (NDVI) values for defined period of times.
+A GeoZarr DataArray variable is a **Zarr Array** that provides values of a measured or observed **phenomena** (possibly indirectly computed using processing). For example, it might provide reflectance values of a captured satellite scene, or it may describe average vegetation index (NDVI) values for defined period of times.
 
 GeoZarr DataArray variable MUST include the attribute **\_ARRAY_DIMENSIONS which list the dimension names** (this property was first introduced by xarray library).
 
@@ -50,7 +50,7 @@ If multiple Array Variables share heterogenous dimensions or coordinates, a prim
 
 ## CF Conventions
 
-GeoZarr Arrays and Coordinates Variables MUST include [Climate and Forecast CF](http://cfconventions.org/) conventions. The minimum set of attributes MUST be:
+GeoZarr Arrays and Coordinates Variables MUST include [Climate and Forecast CF](http://cfconventions.org/) conventions (in the .attrs ojbect). The minimum set of attributes MUST be:
 
 * standard_name for all variables
 * grid_mapping (coordinates reference system) for all array variables
