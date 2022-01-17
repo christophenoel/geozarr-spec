@@ -48,14 +48,6 @@ GeoZarr Dataset MUST contain a consistent set of data for which the DataArray va
 
 If multiple Array Variables share heterogenous dimensions or coordinates, a primary set MUST be located at root level, and the other sets put in children datasets.
 
-## GeoZarr Dimensions
-
-It is recommended to represent the properties as a dimension (instead of splitting data in multiple arrays):
-* Latitude
-* Longitude
-* Time
-* Altitude
-* Band (or wavelength)
 
 ## CF Conventions
 
@@ -73,11 +65,15 @@ The quantity may describe the observed phenomenon for:
 * a Coordinate variable
 * an Auxiliary variable
 
-The following standard names are recommended for optical sensors:
+## Dimensions
+
+The following standard names are recommended for dimensions holding the geospatial data:
 * grid_latitude, grid_longitude (spatial coordinates as degrees)
 * projection_x_coordinate, projection_y_coordinates (spatial coordinates as per projection)
 * sensor_band_identifier (multisptrectal band identifier)
 * radiation_wavelength (hyperspectral wave length)
+* altitude
+* time
 
 ### Coordinate Reference System
 
@@ -135,7 +131,7 @@ GeoZarr Dataset and DataArrray can define a quicklook defined by a path for each
 -    {
 -      "b": "rgb/data['2']"
 "
--    },
+-    }
 -  ]
 -}
 ```
@@ -143,7 +139,24 @@ GeoZarr Dataset and DataArrray can define a quicklook defined by a path for each
 
 ## Rechunking
 
-###
+GeoZarr DataArrray MUST specify the paths to the rechunked instance of the data. These duplicates of the data enables to optimize queries on specific dimensions to improve performances (e.g. for requesting time series).
+
+The attribute rechunking list the path the the various instances of the data. The corresponding Zarr metadata provides along the rechunked array provides the chunk size and shape.
+
+```diff
+(mandatory items in red, optional items in green)
+-{
+-  "rechunking": [
+-    {
+-      "path": "rechunk1"
+-    },
+-    {
+-      "path": "rechunk2"
+-    }
+-  ]
+-}
+
+
 
 ## Specific Recommendations
 
