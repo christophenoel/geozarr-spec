@@ -73,10 +73,12 @@ However, all other CF conventions are recommended, in particular the attributes 
 A GeoZarr DataArray variable might
 
 In case of downscaled instances of the data, the DataArray MUST define a multiscales attribute that includes the following properties 
-* TBD level default strategy (see existing )
-* Path MUST provides a relative path the Zarr group which holds the same DataArray variable (based on name)
-* Data size can be infered from the size of the referenced array
 
+* Path MUST provides a relative path the Zarr group which holds the same DataArray variable (based on name)
+* Resolution is required to infer the required zoom level
+* Zoom levels should be provided from highest to lowest resolution
+* Recommended scale strategy is a doubled resolution for each level.
+* First level path MUST reference to itself or can be omitted.
 
 ```diff
 (mandatory items in red, optional items in green)
@@ -85,9 +87,9 @@ In case of downscaled instances of the data, the DataArray MUST define a multisc
 -    {
 -      "name": "example",
 -      "datasets": [
--        {"path": "0"},
--        {"path": "1"},
--        {"path": "2"}
+-        {"path": ".", "resolution": "0.02"},
+-        {"path": "1", "resolution": "0.04"},
+-        {"path": "2", "resolution": "0.08"}
 -      ],
 +      "type": "gaussian",
 -    }
