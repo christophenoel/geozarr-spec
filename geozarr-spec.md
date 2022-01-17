@@ -67,7 +67,7 @@ The quantity may describe the observed phenomenon for:
 * a Coordinate variable
 * an Auxiliary variable
 
-The following standard names are recommended for dimensions holding the geospatial data:
+The following standard names are recommended to describe coordinates variables for dimensions of DataArrays:
 * grid_latitude, grid_longitude (spatial coordinates as degrees)
 * projection_x_coordinate, projection_y_coordinates (spatial coordinates as per projection)
 * sensor_band_identifier (multisptrectal band identifier)
@@ -77,7 +77,7 @@ The following standard names are recommended for dimensions holding the geospati
 
 ### Coordinate Reference System
 
-The **grid_mapping** variable defined by DataArray variable defines  the coordinate reference system (CRS) used for the horizontal spatial coordinate values. The grid_mapping value indicates the Auxliary variable that holds all the CF attribute describing the cRS. 
+The **grid_mapping** variable defined by DataArray variable defines  the coordinate reference system (CRS) used for the horizontal spatial coordinate values. The grid_mapping value indicates the Auxliary variable that holds all the CF attribute describing the CRS. 
 
 ### Other Properties
 
@@ -161,9 +161,9 @@ The attribute rechunking list the path the the various instances of the data. Th
 
 ### Multispectral Data
 
-If the optical sensor captures spectral bands for different resolution, it is RECOMMENDED to hold the highest resolution dataset, and children groups the other resolutions.
+If the optical sensor captures spectral bands for different resolution, it is RECOMMENDED to hold the highest resolution dataset in the root group, and provide the other resolutions in children groups.
 
-By the way, the spectral band itself might be represented in different maneer:
-* If the band is represented in a dedicated array variable, As an array
+The spectral band SHOULD be represented as a dimension (not as an array neither a group).
+
 
 
