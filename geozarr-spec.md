@@ -20,7 +20,7 @@ GeoZarr is restricted to geospatial data which conforms to the conceptual class 
 
 ### GeoZarr DataArray
 
-A GeoZarr DataArray variable is a **Zarr Array** that provides values of a measured or observed **phenomena** (possibly indirectly computed using processing). For example, it might provide reflectance values of a captured satellite scene, or it may describe average vegetation index (NDVI) values for defined period of times.
+A GeoZarr DataArray variable is a **Zarr Array** that provides values of a measured or observed **geospatial phenomena** (possibly indirectly computed using processing). For example, it might provide reflectance values of a captured satellite scene, or it may describe average vegetation index (NDVI) values for defined period of times.
 
 GeoZarr DataArray variable MUST include the attribute **\_ARRAY_DIMENSIONS which list the dimension names** (this property was first introduced by xarray library).
 
