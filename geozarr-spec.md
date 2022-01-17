@@ -51,7 +51,7 @@ If multiple Array Variables share heterogenous dimensions or coordinates, a prim
 
 ## GeoZarr Metadata
 
-GeoZarr Arrays and Coordinates Variables MUST include [Climate and Forecast CF](http://cfconventions.org/) conventions (in the .attrs ojbect). The minimum set of attributes MUST be:
+GeoZarr Arrays and Coordinates Variables MUST include [Climate and Forecast (CF)](http://cfconventions.org/) attributes (in the .attrs ojbect). The variables MUST include at least:
 
 * standard_name for all variables
 * grid_mapping (coordinates reference system) for all array variables
