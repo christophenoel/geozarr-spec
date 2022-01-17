@@ -14,7 +14,9 @@ This specification is an early draft (v0.1)
 
 GeoZarr documentation by Christophe Noël (Spacebel) and other contributors.
 
-## Conceptual Classes
+## GeoZarr Classes
+
+GeoZarr is
 
 ### GeoZarr DataArray Variables
 
