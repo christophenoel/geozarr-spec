@@ -93,9 +93,7 @@ All other CF conventions are recommended, in particular the attributes below:
 
 ## Multiscales
 
-A GeoZarr DataArray variable might
-
-In case of downscaled instances of the data, the DataArray MUST define a multiscales attribute that includes the following properties 
+A GeoZarr DataArray variable might provide downscales of the data. In such case, the DataArray MUST define a multiscales attribute that includes the following properties 
 
 * Path MUST provides a relative path the Zarr group which holds the same DataArray variable (based on name)
 * Resolution is required to infer the required zoom level
@@ -121,6 +119,8 @@ In case of downscaled instances of the data, the DataArray MUST define a multisc
 ```
 
 ## Quicklook
+
+GeoZarr Dataset and DataArrray can define a quicklook defined by a path for each colour. 
 
 ```diff
 (mandatory items in red, optional items in green)
