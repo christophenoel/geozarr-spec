@@ -62,7 +62,7 @@ The quantity may describe the observed phenomenon for:
 * a Coordinate variable
 * an Auxiliary variable
 
-The following set of standard names are typically used: 
+The following standard names are recommended for optical sensors:
 * grid_latitude, grid_longitude (spatial coordinates as degrees)
 * projection_x_coordinate, projection_y_coordinates (spatial coordinates as per projection)
 * sensor_band_identifier (multisptrectal band identifier)
@@ -72,7 +72,9 @@ The following set of standard names are typically used:
 
 The **grid_mapping** variable defined by DataArray variable defines  the coordinate reference system (CRS) used for the horizontal spatial coordinate values. The grid_mapping value indicates the Auxliary variable that holds all the CF attribute describing the cRS. 
 
-However, all other CF conventions are recommended, in particular the attributes below:
+### Other Properties
+
+All other CF conventions are recommended, in particular the attributes below:
 
 * add_offset
 * scale_factor
