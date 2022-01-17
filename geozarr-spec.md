@@ -24,10 +24,14 @@ A GeoZarr DataArray variable is a **Zarr Array** that provides values of a measu
 
 GeoZarr DataArray variable MUST include the attribute **\_ARRAY_DIMENSIONS which list the dimension names** (this property was first introduced by xarray library).
 
+
+```
 "_ARRAY_DIMENSIONS": [
         "lat",
         "lon"
     ]
+```    
+    
 ### GeoZarr Coordinates
 
 GeoZarr Coordinates variable is a one dimensional **Zarr Array** that **indexes a dimension** of a GeoZarr DataArray (e.g latitude, longitude, time, wavelength).
