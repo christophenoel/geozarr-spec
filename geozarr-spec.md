@@ -18,7 +18,7 @@ GeoZarr documentation by Christophe Noël (Spacebel) and other contributors.
 
 GeoZarr is restricted to geospatial data which conforms to the conceptual class of Dataset as defined below.
 
-### GeoZarr DataArray Variables
+### GeoZarr DataArray
 
 A GeoZarr DataArray variable is a **Zarr Array** that provides values of a measured or observed **phenomena** (possibly indirectly computed using processing). For example, it might provide reflectance values of a captured satellite scene, or it may describe average vegetation index (NDVI) values for defined period of times.
 
@@ -28,13 +28,13 @@ GeoZarr DataArray variable MUST include the attribute **\_ARRAY_DIMENSIONS which
         "lat",
         "lon"
     ]
-### GeoZarr Coordinates Variables
+### GeoZarr Coordinates
 
 GeoZarr Coordinates variable is a one dimensional **Zarr Array** that **indexes a dimension** of a GeoZarr DataArray (e.g latitude, longitude, time, wavelength).
 
 GeoZarr Coordinates variable MUST include the attribute **\_ARRAY_DIMENSIONS equal to the Zarr array name** (e.g. latitude for the latitude Zarr Array).
 
-### GeoZarr Auxiliary Variables
+### GeoZarr Auxiliary Data
 
 GeoZarr Auxiliary variable is empty, one dimensional or multidimensional **Zarr Array** providing auxiliary information.
 
