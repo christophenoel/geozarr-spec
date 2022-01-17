@@ -50,7 +50,12 @@ If multiple Array Variables share heterogenous dimensions or coordinates, a prim
 
 ## GeoZarr Dimensions
 
-
+It is recommended to represent the properties as a dimension (instead of splitting data in multiple arrays):
+* Latitude
+* Longitude
+* Time
+* Altitude
+* Band (or wavelength)
 
 ## CF Conventions
 
