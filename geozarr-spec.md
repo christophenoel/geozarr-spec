@@ -49,7 +49,7 @@ GeoZarr Dataset MUST contain a consistent set of data for which the DataArray va
 If multiple Array Variables share heterogenous dimensions or coordinates, a primary homogeneous set of variables MUST be located at root level, and the other sets declared in children datasets.
 
 
-## CF Conventions
+## GeoZarr Metadata
 
 GeoZarr Arrays and Coordinates Variables MUST include [Climate and Forecast CF](http://cfconventions.org/) conventions (in the .attrs ojbect). The minimum set of attributes MUST be:
 
@@ -65,7 +65,7 @@ The quantity may describe the observed phenomenon for:
 * a Coordinate variable
 * an Auxiliary variable
 
-## Dimensions
+### Dimensions
 
 The following standard names are recommended for dimensions holding the geospatial data:
 * grid_latitude, grid_longitude (spatial coordinates as degrees)
