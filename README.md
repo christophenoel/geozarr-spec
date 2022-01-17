@@ -78,7 +78,7 @@ However, all other CF conventions are recommended, in particular the attributes 
 * scale_factor
 * units (as per [UDUNITS v2](https://www.unidata.ucar.edu/software/udunits/udunits-2.2.28/udunits2.html))
 
-### Multiscales
+## Multiscales
 
 A GeoZarr DataArray variable might
 
@@ -107,8 +107,9 @@ In case of downscaled instances of the data, the DataArray MUST define a multisc
 -}
 ```
 
+## Quicklook
 
-### Rechunking
+## Rechunking
 
 ###
 
