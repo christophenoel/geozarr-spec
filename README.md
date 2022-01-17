@@ -51,7 +51,7 @@ If multiple Array Variables share heterogenous dimensions or coordinates, a prim
 GeoZarr Arrays and Coordinates Variables MUST include [Climate and Forecast CF](http://cfconventions.org/) conventions. The minimum set of attributes MUST be:
 
 * standard_name for all variables
-* grid_mapping for all array variables
+* grid_mapping (coordinates reference system) for all array variables
 
 ### Standard Name
 
@@ -62,11 +62,13 @@ The quantity may describe the observed phenomenon for:
 * a Coordinate variable
 * an Auxiliary variable
 
-The following set of standard names are typically used
+The following set of standard names are typically used: 
 * grid_latitude, grid_longitude (spatial coordinates as degrees)
 * projection_x_coordinate, projection_y_coordinates (spatial coordinates as per projection)
 * sensor_band_identifier (multisptrectal band identifier)
 * radiation_wavelength (hyperspectral wave length)
+
+### Coordinate Reference System
 
 The **grid_mapping** variable defined by DataArray variable defines  the coordinate reference system (CRS) used for the horizontal spatial coordinate values. The grid_mapping value indicates the Auxliary variable that holds all the CF attribute describing the cRS. 
 
