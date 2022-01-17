@@ -120,7 +120,7 @@ A GeoZarr DataArray variable might provide downscales of the data. In such case,
 
 ## Quicklook
 
-GeoZarr Dataset and DataArrray can define a quicklook defined by a path for each colour. 
+GeoZarr Dataset and DataArrray can define a quicklook defined by a path for each colour. As illustrated for blue colour, the path can be specified using a 
 
 ```diff
 (mandatory items in red, optional items in green)
@@ -133,7 +133,8 @@ GeoZarr Dataset and DataArrray can define a quicklook defined by a path for each
 -      "g": "rgb/green"
 -    },
 -    {
--      "b": "rgb/blue"
+-      "b": "rgb/data['2']"
+"
 -    },
 -  ]
 -}
