@@ -111,6 +111,24 @@ In case of downscaled instances of the data, the DataArray MUST define a multisc
 
 ## Quicklook
 
+```diff
+(mandatory items in red, optional items in green)
+-{
+-  "quicklook": [
+-    {
+-      "r": "rgb/data['red']
+-    },
+-    {
+-      "g": "rgb/data['green']
+-    },
+-    {
+-      "b": "rgb/data['blue']
+-    },
+-  ]
+-}
+```
+
+
 ## Rechunking
 
 ###
