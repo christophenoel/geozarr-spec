@@ -116,13 +116,13 @@ In case of downscaled instances of the data, the DataArray MUST define a multisc
 -{
 -  "quicklook": [
 -    {
--      "r": "rgb/data['red']
+-      "r": "rgb/data['red']"
 -    },
 -    {
--      "g": "rgb/data['green']
+-      "g": "rgb/data['green']"
 -    },
 -    {
--      "b": "rgb/data['blue']
+-      "b": "rgb/data['blue']"
 -    },
 -  ]
 -}
