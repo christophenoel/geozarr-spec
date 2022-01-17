@@ -53,8 +53,16 @@ GeoZarr Arrays and Coordinates Variables MUST include [Climate and Forecast CF](
 * standard_name for all variables
 * grid_mapping for all array variables
 
-A CF **standard name** is an attribute which identifies the physical quantity of a variable ([table](https://cfconventions.org/Data/cf-standard-names/78/build/cf-standard-name-table.html)). The quantity may describe the observed phenomenon for a DataArray (for example 'surface_bidirectional_reflectance' for optical sensor data) or identify the 
+### Standard Name
 
+A CF **standard name** is an attribute which identifies the physical quantity of a variable ([table](https://cfconventions.org/Data/cf-standard-names/78/build/cf-standard-name-table.html)). 
+
+The quantity may describe the observed phenomenon for:
+* a DataArray variable (for example 'surface_bidirectional_reflectance' for optical sensor data)
+* a Coordinate variable
+* an Auxiliary variable
+
+The following set of standard names are typically used
 * grid_latitude, grid_longitude (spatial coordinates as degrees)
 * projection_x_coordinate, projection_y_coordinates (spatial coordinates as per projection)
 * sensor_band_identifier (multisptrectal band identifier)
