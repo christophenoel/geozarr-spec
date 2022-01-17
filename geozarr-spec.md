@@ -139,7 +139,7 @@ GeoZarr Dataset and DataArrray can define a quicklook defined by a path for each
 
 ## Rechunking
 
-GeoZarr DataArrray MUST specify the paths to the rechunked instance of the data. These duplicates of the data enables to optimize queries on specific dimensions to improve performances (e.g. for requesting time series).
+GeoZarr DataArrray MUST specify the paths to the rechunked instance of the data. These duplicates of the data enable optimizing queries on specific dimensions to improve performances (e.g. for requesting time series).
 
 The attribute rechunking list the path the the various instances of the data. The corresponding Zarr metadata provides along the rechunked array provides the chunk size and shape.
 
