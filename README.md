@@ -6,7 +6,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 ## Current Version
 
-
+Link: [geozarr-spec.md](geozarr-spec.md)
 
 ## Status
 
