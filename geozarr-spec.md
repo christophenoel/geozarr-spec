@@ -1,4 +1,4 @@
-# GeoZarr-spec 0.1
+# GeoZarr-spec 0.2
 
 This document aims to provides a geospatial extension to the Zarr specification (v2). Zarr specifies a protocol and format used for storing Zarr arrays, while the present extension defines **conventions** and recommendations for storing **multidimensional georeferenced grid** of geospatial observations (including rasters). 
 
@@ -91,11 +91,13 @@ All other CF conventions are recommended, in particular the attributes below:
 
 A GeoZarr DataArray variable might provide downscales of the data. In such case, the DataArray MUST define a multiscales attribute that includes the following properties 
 
-* Path MUST provides a relative path the Zarr group which holds the same DataArray variable (based on name)
+* Path is an integer that describes the zoom level
+* Path is the relative path the Zarr group which holds the same DataArray variable (based on name)
 * Resolution is required to infer the required zoom level
 * Zoom levels should be provided from highest to lowest resolution
-* Recommended scale strategy is a doubled resolution for each level.
 * First level path MUST reference to itself or can be omitted.
+
+The recommended zoom strategy is to provide level 0 as 256x256 pixels covering the entire world, and the The scale is doubled on each zoom level as per https://wiki.openstreetmap.org/wiki/Zoom_levels .
 
 ```diff
 (mandatory items in red, optional items in green)
