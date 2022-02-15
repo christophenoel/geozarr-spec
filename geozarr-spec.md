@@ -118,7 +118,9 @@ The recommended zoom strategy is to provide level 0 as 256x256 pixels covering t
 
 ## Quicklook
 
-GeoZarr Dataset and DataArrray can define a quicklook defined by a path for each colour. As illustrated for blue colour, the path can be specified using a label-based indexing (similar to pandas: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html)
+GeoZarr Dataset and DataArrray can define a quicklook defined by a path for each colour. The quicklook is assumed in the Web Mercator projection.
+
+As illustrated for blue colour, the path can be specified using a label-based indexing (similar to pandas: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html)
 
 ```diff
 (mandatory items in red, optional items in green)
