@@ -93,11 +93,10 @@ A GeoZarr DataArray variable might provide downscales of the data. In such case,
 
 * Path is an integer that describes the zoom level
 * Path is the relative path the Zarr group which holds the same DataArray variable (based on name)
-* Resolution (m / pixel) is RECOMMENDED to infer the required zoom level
-* Zoom levels should be provided from highest to lowest resolution
+* Zoom levels should be provided from lowest to highest resolutions
 * First level path MUST reference to itself or can be omitted.
 
-The recommended zoom strategy is to provide level 0 as 256x256 pixels covering the entire world, and the The scale is doubled on each zoom level as per https://wiki.openstreetmap.org/wiki/Zoom_levels .
+The REQUIRED zoom strategy is to provide level 0 as 256x256 pixels covering the entire world, and the The scale is doubled on each zoom level as per https://wiki.openstreetmap.org/wiki/Zoom_levels .
 
 ```diff
 (mandatory items in red, optional items in green)
@@ -107,10 +106,11 @@ The recommended zoom strategy is to provide level 0 as 256x256 pixels covering t
 -      "name": "example",
 
 -      "datasets": [
--        {"path": ".", "level": "10"},
+
 -        {"path": "0", "level": "0", "crs": "EPSG:3857"},
 -        {"path": "1", "level": "1", "crs": "EPSG:3857",
--        {"path": "2", "level": "2", "crs": "EPSG:3857"}
+-        {"path": "2", "level": "2", "crs": "EPSG:3857"},
+-        {"path": ".", "level": "10"}
 -      ],
 +      "type": "gaussian",
 -    }
