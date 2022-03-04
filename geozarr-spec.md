@@ -151,7 +151,7 @@ A GeoZarr Dataset (default) or DataArray variable might define the relevant symb
 +    "channel-selection": {
 +      "red":"B4"
 +      "green":"data[3]"
-+      "blue":"data[2]"
++      "blue":"data['420']"
 +      "grey":"data[2]"
 +    "colorMap": [
 -      "color-map-entry": {
