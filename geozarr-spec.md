@@ -117,6 +117,27 @@ The REQUIRED zoom strategy is to provide level 0 as 256x256 pixels covering the 
 -  ]
 -}
 ```
+## Symbology
+
+A GeoZarr DataArray variable might provide the adapted symbology of the data using a color map.
+
+```diff
+(mandatory items in red, optional items in green)
+-{
+-  "colorMap": [
+-    "colorMapEntry": {
+-      "color": "#000000",
++      "label": "0"
+-      "quantity": "0" },
+-    "colorMapEntry": {
+-      "color": "#d73027",
++      "label": "50"
+-      "quantity": "0.5" }
+-     ]
+-}    
+```
+                      
+
 
 ## Quicklook
 
