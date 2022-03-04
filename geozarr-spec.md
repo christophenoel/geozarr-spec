@@ -127,7 +127,7 @@ Each DataArray MUST define the 'multiscales' metadata attribute that provides th
 +  ]
 +}
 ```
-## Symbology
+## Portrayals and Symbology
 
 A GeoZarr Dataset variable might define a set of visual portrayals of the geospatial data and define an adequate symbology. The symbology model is based on a simplified schema based on OGC Symbology Encoding Implementation Specification https://www.ogc.org/standards/symbol.
 
