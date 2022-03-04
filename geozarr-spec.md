@@ -175,4 +175,5 @@ The wavelength SHOULD be represented as a dimension.
 
 ### Time Series
 
-Time should be represented as a dimension. By default, it is considered that the various temporal instance are aligned using a nearest interpolation (which implies maximum half resolution of error in worst case).
+For level 3+ products, time should be represented as a dimension. 
+When the scene temporal instances are not sharing a common coordinate grid , it is recommended to project (interpolate) the scenes in a standard geometry.
