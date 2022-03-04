@@ -105,13 +105,12 @@ The REQUIRED zoom strategy is to provide level 0 as 256x256 pixels covering the 
 -  "multiscales": [
 -    {
 -      "name": "example",
-
 -      "datasets": [
-
--        {"path": "0", "level": "0", "crs": "EPSG:3857"},
--        {"path": "1", "level": "1", "crs": "EPSG:3857",
--        {"path": "2", "level": "2", "crs": "EPSG:3857"},
--        {"path": ".", "level": "10"}
+-        {"path": "0", "level": "0", 
++         "crs": "EPSG:3857"},
+-        {"path": "1", "level": "1",
+-        {"path": "2", "level": "2"},
+-        {"path": ".", "level": "3"}
 -      ],
 +      "type": "gaussian",
 -    }
