@@ -87,15 +87,6 @@ All other CF conventions are recommended, in particular the attributes below:
 * scale_factor
 * units (as per [UDUNITS v2](https://www.unidata.ucar.edu/software/udunits/udunits-2.2.28/udunits2.html))
 
-### List of DataArray variables
-
-Additionally to the CF attributes, it is RECOMMENDED to specify the list of DataArray variables which provide the geospatial data. The first variable name indicates the major variable that should be selected by default on the client application.
-
-```diff
-(mandatory items in red, optional items in green)
-+  "datarrays": ["ndvi", "ndwi" ]
-```
-
 ## Multiscales
 
 A GeoZarr Dataset variable might includes multiscales for a set of DataArray variables.  Also known as overviews, multiscales provides download-scaled versions of the original image and represent zoomed out version of the image for fast visualisation purposes. A zoomed out version of the original image thus holds much less detail.
@@ -138,8 +129,9 @@ Each DataArray MUST define the 'multiscales' metadata attribute that provides th
 ```
 ## Symbology
 
-A GeoZarr Dataset (default) or DataArray variable might define the relevant symbology for the visual portrayal of the geospatial data. The symbology model is based on a simplified schema based on OGC Symbology Encoding Implementation Specification https://www.ogc.org/standards/symbol.
+A GeoZarr Dataset variable might define a set of visual portrayals of the geospatial data and define an adequate symbology. The symbology model is based on a simplified schema based on OGC Symbology Encoding Implementation Specification https://www.ogc.org/standards/symbol.
 
+* Name: defines the name of the portrayal.
 * Attribute 'channel-selection' MUST define either the RGB channels, or the grey channels to be represented.
 * Channel values MUST specify the relative path to the data, and optionally include the group(s), array and index (which can use positional and label-based indexing (see: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html).
 * If grey channel is specified, the 'color-map' MAY define the mapping of palette-type raster colors or fixed-numeric pixel values to colors.
@@ -147,27 +139,28 @@ A GeoZarr Dataset (default) or DataArray variable might define the relevant symb
 ```diff
 (mandatory items in red, optional items in green)
 +{
-+  "symbology": {
-+    "channel-selection": {
-+      "red":"B4"
-+      "green":"data[3]"
-+      "blue":"data['420']"
-+      "grey":"data[2]"
-+    "colorMap": [
--      "color-map-entry": {
--        "color": "#000000",
-+        "label": "0"
--        "quantity": "0" },
--      "color-map-entry": {
--        "color": "#d73027",
-+        "label": "50"
--        "quantity": "0.5" }
-+       ]
-+  }    
++  "portrayals": [
++    "name": {
++    "symbology": {
++      "channel-selection": {
++        "red":"B4"
++        "green":"data[3]"
++        "blue":"data['420']"
++        "grey":"data[2]"
++      "colorMap": [
+-        "color-map-entry": {
+-          "color": "#000000",
++          "label": "0"
+-          "quantity": "0" },
+-        "color-map-entry": {
+-          "color": "#d73027",
++          "label": "50"
+-          "quantity": "0.5" }
++         ]
++    }    
++  ]    
 +}    
 ```
-
-
 
 ## Rechunking
 
