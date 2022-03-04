@@ -101,8 +101,8 @@ The REQUIRED zoom strategy is to provide level 0 as 256x256 pixels covering the 
 
 ```diff
 (mandatory items in red, optional items in green)
--{
--  "multiscales": [
++{
++  "multiscales": [
 -    {
 -      "name": "example",
 -      "datasets": [
@@ -114,8 +114,8 @@ The REQUIRED zoom strategy is to provide level 0 as 256x256 pixels covering the 
 -      ],
 +      "type": "gaussian",
 -    }
--  ]
--}
++  ]
++}
 ```
 ## Symbology
 
@@ -123,8 +123,8 @@ A GeoZarr DataArray variable might provide the adapted symbology of the data usi
 
 ```diff
 (mandatory items in red, optional items in green)
--{
--  "colorMap": [
++{
++  "colorMap": [
 -    "colorMapEntry": {
 -      "color": "#000000",
 +      "label": "0"
@@ -133,8 +133,8 @@ A GeoZarr DataArray variable might provide the adapted symbology of the data usi
 -      "color": "#d73027",
 +      "label": "50"
 -      "quantity": "0.5" }
--     ]
--}    
++     ]
++}    
 ```
                       
 
