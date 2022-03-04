@@ -95,6 +95,7 @@ A GeoZarr DataArray variable might provide downscales of the data. In such case,
 * Path is the relative path the Zarr group which holds the same DataArray variable (based on name)
 * Zoom levels should be provided from lowest to highest resolutions
 * First level path MUST reference to itself or can be omitted.
+* If the optional 'crs' attribute is missing, then the downscaled version are assumed to be non-projected (and can be displayed using a "pseudo plate-carree" projection)
 
 The REQUIRED zoom strategy is to provide level 0 as 256x256 pixels covering the entire world, and the The scale is doubled on each zoom level as per https://wiki.openstreetmap.org/wiki/Zoom_levels .
 
