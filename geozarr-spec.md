@@ -89,15 +89,25 @@ All other CF conventions are recommended, in particular the attributes below:
 
 ## Multiscales
 
-A GeoZarr DataArray variable might provide downscales of the data. In such case, the DataArray MUST define a multiscales attribute that includes the following properties 
+A GeoZarr Dataset variable might includes multiscales for a set of DataArray variables.  Also known as overviews, multiscales provides download-scaled versions of the original image and represent zoomed out version of the image for fast visualisation purposes. A zoomed out version of the original image thus holds much less detail.
 
-* Path is an integer that describes the zoom level
-* Path is the relative path the Zarr group which holds the same DataArray variable (based on name)
-* Zoom levels should be provided from lowest to highest resolutions
+### Multiscales Encoding 
+
+ Multiscales MUST be encoded in children groups.
+ 
+* Multiscale group name is the zoom level (e.g. '0').
+* Multiscale group contains all DataArrays generated for this specific zoom level.
+* Zoom level  strategy is based on defacto standard level 0 as 256x256 pixels covering the entire world, and scale doubled on each level as per https://wiki.openstreetmap.org/wiki/Zoom_levels. 
+* Multiscale chunking is RECOMMENDED to be 256 pixels or 512 pixels for the latittude and longitude dimensions.
+
+### Multiscales Metadata
+
+Each DataArray MUST define the 'multiscales' metadata attribute that provides the multiscales group path :
+
+* Path MUST be the relative path to the Zarr group which holds the DataArray variable 
+* Zoom levels MUST be provided from lowest to highest resolutions
 * First level path MUST reference to itself or can be omitted.
-* If the optional 'crs' attribute is missing, then the downscaled version are assumed to be non-projected (and can be displayed using a "pseudo plate-carree" projection)
-
-The REQUIRED zoom strategy is to provide level 0 as 256x256 pixels covering the entire world, and the The scale is doubled on each zoom level as per https://wiki.openstreetmap.org/wiki/Zoom_levels .
+* If the optional 'crs' attribute is missing, then the downscaled version is assumed to be non-projected (and can be displayed using a "pseudo plate-carree" projection).
 
 ```diff
 (mandatory items in red, optional items in green)
