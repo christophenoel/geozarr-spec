@@ -131,7 +131,7 @@ Each DataArray MUST define the 'multiscales' metadata attribute that provides th
 
 A GeoZarr Dataset variable might define a set of visual portrayals of the geospatial data and define an adequate symbology. The symbology model is based on a simplified schema based on OGC Symbology Encoding Implementation Specification https://www.ogc.org/standards/symbol.
 
-* Name: defines the name of the portrayal.
+* Each portrayal defines a name and a symbology
 * Attribute 'channel-selection' MUST define either the RGB channels, or the grey channels to be represented.
 * Channel values MUST specify the relative path to the data, and optionally include the group(s), array and index (which can use positional and label-based indexing (see: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html).
 * If grey channel is specified, the 'color-map' MAY define the mapping of palette-type raster colors or fixed-numeric pixel values to colors.
@@ -140,14 +140,14 @@ A GeoZarr Dataset variable might define a set of visual portrayals of the geospa
 (mandatory items in red, optional items in green)
 +{
 +  "portrayals": [
-+    "name": {
-+    "symbology": {
-+      "channel-selection": {
+-    "name": {
+-    "symbology": {
+-      "channel-selection": {
 +        "red":"B4"
 +        "green":"data[3]"
 +        "blue":"data['420']"
 +        "grey":"data[2]"
-+      "colorMap": [
+-      "colorMap": [
 -        "color-map-entry": {
 -          "color": "#000000",
 +          "label": "0"
