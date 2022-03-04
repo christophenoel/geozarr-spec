@@ -126,8 +126,7 @@ As illustrated for blue colour, the path can be specified using a label-based in
 
 ```diff
 (mandatory items in red, optional items in green)
--{
--  "quicklook": [
++  "quicklook": [
 -    {
 -      "r": "rgb/red"
 -    },
@@ -139,7 +138,6 @@ As illustrated for blue colour, the path can be specified using a label-based in
 "
 -    }
 -  ]
--}
 ```
 
 
@@ -151,16 +149,14 @@ The attribute rechunking list the path the the various instances of the data. Th
 
 ```diff
 (mandatory items in red, optional items in green)
--{
--  "rechunking": [
++  "rechunking": [
 -    {
 -      "path": "rechunk1"
 -    },
 -    {
 -      "path": "rechunk2"
 -    }
--  ]
--}
++  ]
 ```
 
 ## Use Cases
