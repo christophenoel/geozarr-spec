@@ -77,15 +77,24 @@ The following standard names are recommended to describe coordinates variables f
 
 ### Coordinate Reference System
 
-The **grid_mapping** variable defined by DataArray variable defines  the coordinate reference system (CRS) used for the horizontal spatial coordinate values. The grid_mapping value indicates the Auxliary variable that holds all the CF attribute describing the CRS. 
+The **grid_mapping** CF variable defined by DataArray variable defines  the coordinate reference system (CRS) used for the horizontal spatial coordinate values. The grid_mapping value indicates the Auxliary variable that holds all the CF attribute describing the CRS. 
 
-### Other Properties
+### Other CF Properties
 
 All other CF conventions are recommended, in particular the attributes below:
 
 * add_offset
 * scale_factor
 * units (as per [UDUNITS v2](https://www.unidata.ucar.edu/software/udunits/udunits-2.2.28/udunits2.html))
+
+### List of DataArray variables
+
+Additionally to the CF attributes, it is RECOMMENDED to specify the list of DataArray variables which provide the geospatial data. The first variable name indicates the major variable that should be selected by default on the client application.
+
+```diff
+(mandatory items in red, optional items in green)
++  "datarrays": ["ndvi", "ndwi" ]
+```
 
 ## Multiscales
 
@@ -158,27 +167,6 @@ A GeoZarr Dataset (default) or DataArray variable might define the relevant symb
 +}    
 ```
 
-## Quicklook
-
-GeoZarr Dataset and DataArrray can define a quicklook defined by a path for each colour. The quicklook is assumed in the Web Mercator projection.
-
-As illustrated for blue colour, the path can be specified using a label-based indexing (similar to pandas: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html)
-
-```diff
-(mandatory items in red, optional items in green)
-+  "quicklook": [
--    {
--      "r": "rgb/red"
--    },
--    {
--      "g": "rgb/green"
--    },
--    {
--      "b": "rgb/data['2']"
-"
--    }
--  ]
-```
 
 
 ## Rechunking
