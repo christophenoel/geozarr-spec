@@ -119,25 +119,35 @@ The REQUIRED zoom strategy is to provide level 0 as 256x256 pixels covering the 
 ```
 ## Symbology
 
-A GeoZarr DataArray variable might provide the adapted symbology of the data using a color map.
+A GeoZarr DataArray variable might define the symbology for the visual portrayla of the geospatial data. 
+
+TThis includes the channel selection (RGB or grey channels) and a color map. 
+The symbology model is based on a subset of the OGC Symbology Encoding Implementation Specification https://www.ogc.org/standards/symbol.
+
+*
+* channel path indicates the path to the specific array, and can also use label-based indexing (see: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html).
 
 ```diff
 (mandatory items in red, optional items in green)
 +{
-+  "colorMap": [
--    "colorMapEntry": {
--      "color": "#000000",
-+      "label": "0"
--      "quantity": "0" },
--    "colorMapEntry": {
--      "color": "#d73027",
-+      "label": "50"
--      "quantity": "0.5" }
-+     ]
++  "symbology": {
++    "channel-selection": {
++      "red-channel":"B4"
++      "green-channel":"data[3]"
++      "blue-channel":"data[2]]"
++    "colorMap": [
+-      "color-map-entry": {
+-        "color": "#000000",
++        "label": "0"
+-        "quantity": "0" },
+-      "color-map-entry": {
+-        "color": "#d73027",
++        "label": "50"
+-        "quantity": "0.5" }
++       ]
++  }    
 +}    
 ```
-                      
-
 
 ## Quicklook
 
