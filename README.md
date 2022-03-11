@@ -12,12 +12,6 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 This specification is an early draft deveveloped in the frame of an European Space Agency (ESA) GSTP. Through the optional General Support Technology Programme (GSTP) ESA, Participating States and Industry work together to convert promising engineering concepts into a broad spectrum of useable products.
 
-## License
-
-(CC BY 4.0) : Content in this repository is licensed under a Creative Commons Attribution 4.0 International  license. Licensees may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits (attribution). You can find the complete text of this license at http://creativecommons.org/licenses/by/4.0/.
-
-GeoZarr documentation by Christophe Noël from Spacebel, supported by ScanWorld and other contributors.
-
 ## Changelog
 
 ### v0.4 
@@ -32,3 +26,9 @@ GeoZarr documentation by Christophe Noël from Spacebel, supported by ScanWorld 
 ### v0.2
 
 * Specified multiscales zoom level str
+
+## License
+
+(CC BY 4.0) : Content in this repository is licensed under a Creative Commons Attribution 4.0 International  license. Licensees may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits (attribution). You can find the complete text of this license at http://creativecommons.org/licenses/by/4.0/.
+
+GeoZarr documentation by Christophe Noël from Spacebel, supported by ScanWorld and other contributors.
