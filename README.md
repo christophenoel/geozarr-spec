@@ -20,10 +20,15 @@ GeoZarr documentation by Christophe Noël from Spacebel, supported by ScanWorld 
 
 ## Changelog
 
-v0.4
-Added visual portrayals and symbology (instead of quicklook)
-Specified default multiscale non-projection (pseudo 'Plate Carree')
-v0.3
-Refined multiscales metadata (crs and level attributes)
-v0.2
-Specified multiscales zoom level strategy (OpenStreetMap)
+### v0.4 
+
+* Added visual portrayals and symbology (instead of quicklook)
+* Specified default multiscale non-projection (pseudo 'Plate Carree')
+
+### v0.3
+
+* Refined multiscales metadata (crs and level attributes)
+
+### v0.2
+
+* Specified multiscales zoom level str
