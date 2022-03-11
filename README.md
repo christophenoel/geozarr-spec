@@ -17,3 +17,13 @@ This specification is an early draft deveveloped in the frame of an European Spa
 (CC BY 4.0) : Content in this repository is licensed under a Creative Commons Attribution 4.0 International  license. Licensees may copy, distribute, display, perform and make derivative works and remixes based on it only if they give the author or licensor the credits (attribution). You can find the complete text of this license at http://creativecommons.org/licenses/by/4.0/.
 
 GeoZarr documentation by Christophe Noël from Spacebel, supported by ScanWorld and other contributors.
+
+## Changelog
+
+v0.4
+Added visual portrayals and symbology (instead of quicklook)
+Specified default multiscale non-projection (pseudo 'Plate Carree')
+v0.3
+Refined multiscales metadata (crs and level attributes)
+v0.2
+Specified multiscales zoom level strategy (OpenStreetMap)
