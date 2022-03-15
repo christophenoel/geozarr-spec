@@ -8,7 +8,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 Specification [document](geozarr-spec.md) - [Change Log](https://github.com/christophenoel/geozarr-spec/wiki)
 
-Demonstration Videos:
+Demonstration Videos ([Youtube channel](https://youtube.com/playlist?list=PLzPGC4s5HQOPdeLoK1MXK6gEa1x2Az8Dn):
 - [Hyperspectral Data Store and Access Project](https://youtu.be/CfmPppVR-o4)
 - [GeoZarr Visual Portrayals and OpenLayers extension](https://youtu.be/IKURmv6CVGU)
 - [GeoZarr Fast Time Series Plotting](https://youtu.be/Nt1URJqW71o)
