@@ -4,9 +4,18 @@ GeoZarr Spec aims to provides a geospatial extension to the Zarr specification (
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
-## Current Version
+## Document and Resources
 
-[Specification](geozarr-spec.md) - [Change Log](https://github.com/christophenoel/geozarr-spec/wiki)
+Specification [document](geozarr-spec.md) - [Change Log](https://github.com/christophenoel/geozarr-spec/wiki)
+
+Demonstration Videos:
+- [Hyperspectral Data Store and Access Project](https://youtu.be/CfmPppVR-o4)
+- [GeoZarr Visual Portrayals and OpenLayers extension](https://youtu.be/IKURmv6CVGU)
+- [GeoZarr Fast Time Series Plotting](https://youtu.be/Nt1URJqW71o)
+- [GeoZarr Compute and plot NDWI index at runtime](https://youtu.be/UP0DjphdZgM)
+- [GeoZarr Serverless Visualisation and Pixel-Based Access](https://youtu.be/sKlejJcPKqQ)
+- [GeoZarr vs COG Performances](https://youtu.be/KGC8mLqlsCs)
+- Advanced applications: coming soon
 
 ## Status
 
