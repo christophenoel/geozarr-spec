@@ -13,6 +13,7 @@ Demonstration Videos ([Youtube channel](https://youtube.com/playlist?list=PLzPGC
 - [GeoZarr Visual Portrayals and OpenLayers extension](https://youtu.be/IKURmv6CVGU)
 - [GeoZarr Fast Time Series Plotting](https://youtu.be/Nt1URJqW71o)
 - [GeoZarr Compute and plot NDWI index at runtime](https://youtu.be/UP0DjphdZgM)
+- [GeoZarr Catalogue Integration](https://youtu.be/Nlbo3FJH8lo)
 - [GeoZarr Serverless Visualisation and Pixel-Based Access](https://youtu.be/sKlejJcPKqQ)
 - [GeoZarr vs COG Performances](https://youtu.be/KGC8mLqlsCs)
 - Advanced applications: coming soon
