@@ -9,14 +9,15 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 Specification [Document](geozarr-spec.md) - [Change Log](https://github.com/christophenoel/geozarr-spec/wiki)
 
 Demonstration Videos ([Youtube channel](https://youtube.com/playlist?list=PLzPGC4s5HQOPdeLoK1MXK6gEa1x2Az8Dn))
-- [Hyperspectral Data Store and Access Project](https://youtu.be/CfmPppVR-o4)
-- [GeoZarr Visual Portrayals and OpenLayers extension](https://youtu.be/IKURmv6CVGU)
-- [GeoZarr Fast Time Series Plotting](https://youtu.be/Nt1URJqW71o)
-- [GeoZarr Compute and plot NDWI index at runtime](https://youtu.be/UP0DjphdZgM)
-- [GeoZarr Catalogue Integration](https://youtu.be/Nlbo3FJH8lo)
-- [GeoZarr Serverless Visualisation and Pixel-Based Access](https://youtu.be/sKlejJcPKqQ)
-- [GeoZarr vs COG Performances](https://youtu.be/KGC8mLqlsCs)
-- Advanced applications: coming soon
+- Project Presentation (at WGISS-53) [GeoZarr Data Store - Context of the ESA GSTP project](https://youtu.be/NYhh66EstnY)
+- Project Presentation (at DAP) [Hyperspectral Data Store and Access Project](https://youtu.be/CfmPppVR-o4)
+- Demo: [GeoZarr Visual Portrayals and OpenLayers extension](https://youtu.be/IKURmv6CVGU)
+- Demo: [GeoZarr Fast Time Series Plotting](https://youtu.be/Nt1URJqW71o)
+- Demo: [GeoZarr Compute and plot NDWI index at runtime](https://youtu.be/UP0DjphdZgM)
+- Demo: [GeoZarr Catalogue Integration](https://youtu.be/Nlbo3FJH8lo)
+- Demo: [GeoZarr Serverless Visualisation and Pixel-Based Access](https://youtu.be/sKlejJcPKqQ)
+- Comparison: [GeoZarr vs COG Performances](https://youtu.be/KGC8mLqlsCs)
+- Advanced applications: soon
 
 ## Status
 
