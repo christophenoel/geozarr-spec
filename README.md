@@ -6,7 +6,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 ## Document and Resources
 
-Specification [document](geozarr-spec.md) - [Change Log](https://github.com/christophenoel/geozarr-spec/wiki)
+Specification [Document](geozarr-spec.md) - [Change Log](https://github.com/christophenoel/geozarr-spec/wiki)
 
 Demonstration Videos ([Youtube channel](https://youtube.com/playlist?list=PLzPGC4s5HQOPdeLoK1MXK6gEa1x2Az8Dn):
 - [Hyperspectral Data Store and Access Project](https://youtu.be/CfmPppVR-o4)
