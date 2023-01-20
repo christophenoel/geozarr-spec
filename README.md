@@ -7,4 +7,4 @@ https://github.com/zarr-developers/geozarr-spec
 
 ---
 
-Old description can be found here:  [home-old.md](home-old.md)
+Old description can be found here:  [old-home.md](old-home.md)
