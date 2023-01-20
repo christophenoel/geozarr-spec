@@ -1,6 +1,6 @@
 # DISCLAIMER
 
-The GeoZarr specification has been _transferred_ to the Zarr-developers repository to facilitate collaborative work on the specification.
+The GeoZarr specification has been **transferred** to the Zarr-developers repository to facilitate collaborative work on the specification.
 https://github.com/zarr-developers/geozarr-spec
 
 # Readme - GeoZarr-Spec
